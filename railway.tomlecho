@@ -1,0 +1,28 @@
+[build]
+dockerfilePath = "backend/Dockerfile"
+
+[deploy]
+startCommand = "node server.js"
+```
+
+---
+
+## Then Push to GitHub
+```
+git add .
+git commit -m "Add railway config"
+git push
+```
+
+Railway will **automatically redeploy** as soon as you push!
+
+---
+
+## Why This Happened
+
+Your folder structure is:
+```
+taskmanager/
+├── docker-compose.yml
+├── backend/        ← Dockerfile is here
+└── frontend/
